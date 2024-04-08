@@ -1,3 +1,6 @@
+import navbar from "./POMs/navbar";
+import signinPage from "./POMs/signinPage";
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +26,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("login", (email, password) => {
+  cy.visit(Cypress.config("baseUrl"));
+  navbar.clickSignin();
+  signinPage.elements.email().type(email);
+  signinPage.elements.password().type(password);
+});
