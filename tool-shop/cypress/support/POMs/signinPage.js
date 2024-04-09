@@ -7,6 +7,8 @@ class signinPage {
     email: () => cy.get('[data-test="email"]'),
     password: () => cy.get('[data-test="password"]'),
     signInWithGoogleButton: () => cy.get("button .google-sign-in-button"),
+    emailError: () => cy.get('[data-test="email-error"] > div'),
+    passwordError: () => cy.get('[data-test="password-error"] > div'),
   };
 
   clickRegisterAccount() {

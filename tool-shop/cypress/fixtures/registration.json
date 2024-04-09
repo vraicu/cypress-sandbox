@@ -1,0 +1,13 @@
+{
+  "address": "somewhere",
+  "city": "Calgary",
+  "country": "CA",
+  "dob": "1990-01-01",
+  "email": "jdoe@mail.com",
+  "first_name": "John",
+  "last_name": "Doe",
+  "password": "JohnD@3!",
+  "phone": "90898090",
+  "postcode": "123445",
+  "state": "Alberta"
+}

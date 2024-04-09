@@ -288,6 +288,7 @@ describe("Register form", () => {
 
   describe("with a duplicate email", () => {
     it("should display error", () => {
+      cy.register("jdoe@mail.com");
       for (const field of fields) {
         if (field.isSelect) {
           field.input().select(field.value);
