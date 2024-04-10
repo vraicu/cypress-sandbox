@@ -15,8 +15,8 @@ class signinPage {
     this.elements.registerAccountLink().click();
   }
 
-  clickLogin() {
-    this.elements.loginButton().click();
+  clickLogin(times = 1) {
+    [...Array(times)].forEach(() => this.elements.loginButton().click());
   }
 
   clickForgotYourPassword() {

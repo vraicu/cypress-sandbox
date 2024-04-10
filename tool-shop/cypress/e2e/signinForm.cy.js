@@ -43,9 +43,7 @@ describe("Sign in form", () => {
           signinPage.elements.email().type(email);
           signinPage.elements.password().type("password");
 
-          signinPage.clickLogin();
-          signinPage.clickLogin();
-          signinPage.clickLogin();
+          signinPage.clickLogin(6);
 
           signinPage.elements
             .loginError()
