@@ -12,7 +12,7 @@ describe("Landing page", () => {
       navbar.clickOther();
     });
 
-    it.only("should have two pages of results", () => {
+    it("should have two pages of results", () => {
       cy.fixture("category_other_products.json").then((products) => {
         cy.get(".page-item .page-link").should("have.length", 4);
         const productsPerPage = [9, 8];
@@ -93,7 +93,7 @@ describe("Landing page", () => {
           price: "$100.79",
         },
         {
-          name: "Sheet Sander",
+          name: "Sheet Sanders",
           price: "$58.48",
         },
       ];
