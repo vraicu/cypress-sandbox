@@ -12,6 +12,12 @@ jobs:
         with:
           browser: edge
           working-directory: ./tool-shop
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
   firefox:
     runs-on: ubuntu-22.04
     name: E2E on Firefox
@@ -21,6 +27,12 @@ jobs:
         with:
           browser: firefox
           working-directory: ./tool-shop
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
   chrome:
     runs-on: ubuntu-22.04
     name: E2E on Chrome
@@ -30,3 +42,9 @@ jobs:
         with:
           browser: chrome
           working-directory: ./tool-shop
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
