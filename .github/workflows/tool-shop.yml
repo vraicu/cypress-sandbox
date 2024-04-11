@@ -11,7 +11,7 @@ jobs:
       - uses: cypress-io/github-action@v6
         with:
           browser: edge
-          project: ./tool-shop
+          working-directory: ./tool-shop
   mozilla:
     runs-on: ubuntu-22.04
     name: E2E on Mozilla
@@ -20,7 +20,7 @@ jobs:
       - uses: cypress-io/github-action@v6
         with:
           browser: mozilla
-          project: ./tool-shop
+          working-directory: ./tool-shop
   chrome:
     runs-on: ubuntu-22.04
     name: E2E on Chrome
@@ -29,4 +29,4 @@ jobs:
       - uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          project: ./tool-shop
+          working-directory: ./tool-shop
