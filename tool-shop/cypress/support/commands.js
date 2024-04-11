@@ -36,6 +36,26 @@ Cypress.Commands.add("login", (email, password) => {
   signinPage.clickLogin();
 });
 
+Cypress.Commands.add("getBrands", () => {
+  cy.request("GET", `${Cypress.config("apiUrl")}/brands`).then((response) => {
+    cy.writeFile("cypress/fixtures/brands.json", response.body);
+  });
+});
+
+Cypress.Commands.add("getCategories", () => {
+  cy.request("GET", `${Cypress.config("apiUrl")}/categories`).then(
+    (response) => {
+      cy.writeFile("cypress/fixtures/categories.json", response.body);
+    }
+  );
+});
+
+Cypress.Commands.add("getImages", () => {
+  cy.request("GET", `${Cypress.config("apiUrl")}/images`).then((response) => {
+    cy.writeFile("cypress/fixtures/images.json", response.body);
+  });
+});
+
 Cypress.Commands.add("register", (email = "jdoe@mail.com") => {
   cy.request({
     failOnStatusCode: false,

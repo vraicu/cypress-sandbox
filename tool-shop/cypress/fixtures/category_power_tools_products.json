@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Belt Sander",
+    "price": 73.59
+  },
+  {
+    "name": "Circular Saw",
+    "price": 80.19
+  },
+  {
+    "name": "Cordless Drill 12V",
+    "price": 46.5
+  },
+  {
+    "name": "Cordless Drill 18V",
+    "price": 119.24
+  },
+  {
+    "name": "Cordless Drill 20V",
+    "price": 125.23
+  },
+  {
+    "name": "Cordless Drill 24V",
+    "price": 66.54
+  },
+  {
+    "name": "Random Orbit Sander",
+    "price": 100.79
+  },
+  {
+    "name": "Sheet Sander",
+    "price": 58.48
+  }
+]

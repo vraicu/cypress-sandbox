@@ -11,7 +11,7 @@ Welcome to the tool-shop Cypress Automation Project! This repository contains au
 ├── cypress/
 │   ├── fixtures/          # Test data files
 │   ├── e2e/               # UI Test scripts
-│   ├── api/               # API Test scripts
+|   │   └── api/           # API Test scripts
 │   ├── support/           # Custom commands and utilities
 │   └── screenshots/       # Screenshots captured during test runs
 ├── node_modules/          # Node.js modules (ignored by default)
