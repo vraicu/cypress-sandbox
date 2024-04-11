@@ -1,0 +1,26 @@
+name: Tool Shop E2E
+
+on: [push]
+
+jobs:
+  cypress-run:
+    name: Cypress run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Chrome
+        uses: cypress-io/github-action@v6
+        with:
+          project: ./tool-shop
+          browser: chrome
+      - name: Mozilla
+        uses: cypress-io/github-action@v6
+        with:
+          project: ./tool-shop
+          browser: mozilla
+      - name: Edge
+        uses: cypress-io/github-action@v6
+        with:
+          project: ./tool-shop
+          browser: edge
