@@ -12,14 +12,14 @@ jobs:
         with:
           browser: edge
           working-directory: ./tool-shop
-  mozilla:
+  firefox:
     runs-on: ubuntu-22.04
-    name: E2E on Mozilla
+    name: E2E on Firefox
     steps:
       - uses: actions/checkout@v4
       - uses: cypress-io/github-action@v6
         with:
-          browser: mozilla
+          browser: firefox
           working-directory: ./tool-shop
   chrome:
     runs-on: ubuntu-22.04
