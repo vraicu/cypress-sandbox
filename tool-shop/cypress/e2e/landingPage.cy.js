@@ -93,7 +93,7 @@ describe("Landing page", () => {
           price: "$100.79",
         },
         {
-          name: "Sheet Sanders",
+          name: "Sheet Sander",
           price: "$58.48",
         },
       ];
