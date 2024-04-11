@@ -18,6 +18,7 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+          working-directory: ./tool-shop
   firefox:
     runs-on: ubuntu-22.04
     name: E2E on Firefox
@@ -33,6 +34,7 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+          working-directory: ./tool-shop
   chrome:
     runs-on: ubuntu-22.04
     name: E2E on Chrome
@@ -48,3 +50,4 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+          working-directory: ./tool-shop
