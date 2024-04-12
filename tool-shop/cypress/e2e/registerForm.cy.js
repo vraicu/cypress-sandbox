@@ -1,6 +1,7 @@
 import navbar from "../support/POMs/navbar";
 import registerPage from "../support/POMs/registerPage";
 import signinPage from "../support/POMs/signinPage";
+import { generateId } from "../support/utils";
 
 describe("Register form", () => {
   beforeEach(() => {
@@ -312,13 +313,7 @@ describe("Register form", () => {
     it("should create account", () => {
       for (const field of fields) {
         if (field.name == "E-mail") {
-          field
-            .input()
-            .type(
-              `jdoe${Math.floor(
-                Math.random() * Number.MAX_SAFE_INTEGER
-              )}@email.com`
-            );
+          field.input().type(`jdoe${generateId()}@email.com`);
           continue;
         }
         if (field.isSelect) {

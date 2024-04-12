@@ -1,6 +1,10 @@
 name: Tool Shop E2E
 
-on: [pull_request]
+on:
+  pull_request:
+  push:
+    branches:
+      - develop
 jobs:
   edge:
     runs-on: ubuntu-22.04
@@ -15,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: cypress-screenshots
+          name: cypress-screenshots-edge
           path: tool-shop/cypress/screenshots
   firefox:
     runs-on: ubuntu-22.04
@@ -30,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: cypress-screenshots
+          name: cypress-screenshots-firefox
           path: tool-shop/cypress/screenshots
   chrome:
     runs-on: ubuntu-22.04
@@ -45,5 +49,5 @@ jobs:
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: cypress-screenshots
+          name: cypress-screenshots-chrome
           path: tool-shop/cypress/screenshots

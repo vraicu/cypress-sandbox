@@ -7,5 +7,6 @@ module.exports = defineConfig({
     },
     baseUrl: "https://practicesoftwaretesting.com",
     apiUrl: "https://api.practicesoftwaretesting.com",
+    excludeSpecPattern: "cypress/e2e/api/*",
   },
 });

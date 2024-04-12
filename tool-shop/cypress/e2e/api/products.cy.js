@@ -1,4 +1,4 @@
-import _, { update } from "lodash";
+import _ from "lodash";
 
 context("GET /products", () => {
   let brands = [];
