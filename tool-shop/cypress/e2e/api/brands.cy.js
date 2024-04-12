@@ -10,7 +10,7 @@ context("GET /brands", () => {
     });
   });
 
-  it.skip("should return all brands", () => {
+  it("should return all brands", () => {
     cy.request("GET", `${Cypress.config("apiUrl")}/brands`).then((response) => {
       const brandList = response.body.map((b) => {
         return {
