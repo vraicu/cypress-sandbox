@@ -144,4 +144,14 @@ context("PUT /brands/{brandId}", () => {
   });
 });
 
-context("GET /brands/search", () => {});
+context("GET /brands/search", () => {
+  describe("when search term matches brands", () => {
+    it("should return brand(s)", () => {
+      cy.request("GET", `${Cypress.config("apiUrl")}/brands?q=ForgeFlex`).then(
+        (response) => {
+          expect(response.body.length).to.be.gt(0);
+        }
+      );
+    });
+  });
+});
