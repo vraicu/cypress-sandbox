@@ -1,7 +1,6 @@
 name: Tool Shop E2E
 
-on: [push]
-
+on: [pull_request]
 jobs:
   edge:
     runs-on: ubuntu-22.04
@@ -13,7 +12,7 @@ jobs:
           browser: edge
           working-directory: ./tool-shop
       - name: Upload screenshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: cypress-screenshots
@@ -28,7 +27,7 @@ jobs:
           browser: firefox
           working-directory: ./tool-shop
       - name: Upload screenshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: cypress-screenshots
@@ -43,7 +42,7 @@ jobs:
           browser: chrome
           working-directory: ./tool-shop
       - name: Upload screenshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: cypress-screenshots
