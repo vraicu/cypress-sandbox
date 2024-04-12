@@ -29,7 +29,20 @@ context("GET /brands", () => {
   });
 });
 
-context("POST /brands", () => {});
+context("POST /brands", () => {
+  it.skip("should create a brand", () => {
+    const id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+    const brand = {
+      name: `Brand ${id}`,
+      slug: `brand-${id}`,
+    };
+    cy.request("POST", `${Cypress.config("apiUrl")}/brands`, brand).then(
+      (response) => {
+        expect(_.omit(response.body, "id")).to.deep.equal(brand);
+      }
+    );
+  });
+});
 
 context("GET /brands/{brandId}", () => {});
 
