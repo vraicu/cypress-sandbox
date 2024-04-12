@@ -44,7 +44,26 @@ context("POST /brands", () => {
   });
 });
 
-context("GET /brands/{brandId}", () => {});
+context("GET /brands/{brandId}", () => {
+  it.skip("should get brand by id", () => {
+    const id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+    const brand = {
+      name: `Brand ${id}`,
+      slug: `brand-${id}`,
+    };
+    cy.request("POST", `${Cypress.config("apiUrl")}/brands`, brand).then(
+      (response) => {
+        const newBrand = response.body;
+        cy.request(
+          "GET",
+          `${Cypress.config("apiUrl")}/brands/${newBrand.id}`
+        ).then((response) => {
+          expect(response.body).to.have.deep.equal(newBrand);
+        });
+      }
+    );
+  });
+});
 
 context("PUT /brands/{brandId}", () => {});
 
