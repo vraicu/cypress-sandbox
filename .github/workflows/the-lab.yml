@@ -1,0 +1,21 @@
+name: The Lab E2E
+
+on:
+  push:
+    branches:
+      - "develop"
+jobs:
+  cypress:
+    runs-on: ubuntu-22.04
+    name: Run cypress tests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./the-lab
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: the-lab/cypress/screenshots
