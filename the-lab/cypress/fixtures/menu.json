@@ -1,0 +1,34 @@
+[
+  {
+    "header": "Getting started",
+    "subHeaders": ["Home", "Introduction", "Overview of the tool"]
+  },
+  {
+    "header": "Timing",
+    "subHeaders": ["Speed Game", "Wait Game"]
+  },
+  {
+    "header": "Conditional logic",
+    "subHeaders": ["Yellow or Blue", "Cat or dog"]
+  },
+  {
+    "header": "Lists, Forms and Tables",
+    "subHeaders": ["Sorted list", "Form Fill", "Cat Shelter", "Tables"]
+  },
+  {
+    "header": "Bug reporting",
+    "subHeaders": ["Visual Bugs"]
+  },
+  {
+    "header": "DOM changes",
+    "subHeaders": ["Scramble items"]
+  },
+  {
+    "header": "Using data",
+    "subHeaders": ["Concat strings"]
+  },
+  {
+    "header": "Games",
+    "subHeaders": ["Collecting kittens", "Canvas Game"]
+  }
+]
