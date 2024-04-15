@@ -1,9 +1,10 @@
 name: The Lab E2E
 
 on:
-  push:
-    branches:
-      - "develop"
+  workflow_dispatch:
+#   push:
+#     branches:
+#       - "develop"
 jobs:
   cypress:
     runs-on: ubuntu-22.04
