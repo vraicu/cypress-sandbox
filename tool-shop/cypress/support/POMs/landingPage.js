@@ -7,6 +7,7 @@ class landingPage {
     searchButton: () => cy.get('[data-test="search-submit"]'),
     clearFiltersButton: () => cy.get('[data-test="search-reset"]'),
     sortSelect: () => cy.get('[data-test="sort"]'),
+    productCard: () => cy.get("a.card"),
   };
 
   slidePriceRange(units) {
@@ -21,6 +22,10 @@ class landingPage {
 
   clickClearFiltersButton() {
     this.elements.clearFiltersButton().click();
+  }
+
+  clickCard(index) {
+    this.elements.productCard().eq(index).click();
   }
 }
 
