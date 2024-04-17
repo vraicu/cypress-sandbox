@@ -2,6 +2,7 @@ import landingPage from "../support/POMs/landingPage";
 import detailsPage from "../support/POMs/detailsPage";
 import navbar from "../support/POMs/navbar";
 import cartPage from "../support/POMs/cartPage";
+import favoritesPage from "../support/POMs/favoritesPage";
 
 describe("Product details page", () => {
   beforeEach(() => {
@@ -71,6 +72,64 @@ describe("Product details page", () => {
           "contain.text",
           "Unauthorized, can not add product to your favorite list."
         );
+      });
+    });
+
+    describe("when authorized", () => {
+      it("should add it to the user's favorites list", () => {
+        cy.register();
+        cy.fixture("login.json").then((user) => {
+          cy.intercept(
+            "https://api.practicesoftwaretesting.com/users/login"
+          ).as("login");
+          cy.login(user.email, user.password);
+          cy.wait(["@login"]);
+          navbar.clickHome();
+          landingPage.clickCard(0);
+          detailsPage.addToFavorites();
+          navbar.clickMenu();
+          navbar.clickMyFavorites();
+          cy.fixture("combinationPliers.json").then((product) => {
+            favoritesPage.elements
+              .productTitle()
+              .eq(0)
+              .should("contain.text", product.name);
+            favoritesPage.elements
+              .productDescription()
+              .eq(0)
+              .should("contain.text", product.description.slice(0, 250));
+          });
+          favoritesPage.removeFavorite(0);
+          cy.get("app-toasts div.toast-body").should(
+            "contain.text",
+            "Product added to your favorites list."
+          );
+        });
+      });
+
+      describe("when adding to favorite the same product twice", () => {
+        it.only("should display a toast saying the product is already in our list", () => {
+          cy.register();
+          cy.fixture("login.json").then((user) => {
+            cy.intercept(
+              "https://api.practicesoftwaretesting.com/users/login"
+            ).as("login");
+            cy.login(user.email, user.password);
+            cy.wait(["@login"]);
+            navbar.clickHome();
+            landingPage.clickCard(0);
+            detailsPage.addToFavorites();
+            cy.wait(3500);
+            detailsPage.addToFavorites();
+            navbar.clickMenu();
+            navbar.clickMyFavorites();
+            favoritesPage.removeFavorite(0);
+            cy.get("app-toasts div.toast-body").should(
+              "contain.text",
+              "Product already in your favorites list."
+            );
+          });
+        });
       });
     });
   });

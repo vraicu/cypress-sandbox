@@ -10,7 +10,26 @@ class navbar {
     other: () => cy.get('[data-test="nav-other"]'),
     specialTools: () => cy.get('[data-test="nav-special-tools"]'),
     rentals: () => cy.get('[data-test="nav-rentals"]'),
+    home: () => cy.get('[data-test="nav-home"]'),
+    menu: () => cy.get("#menu"),
+    myAccount: () => cy.get('[data-test="nav-my-account"]'),
+    myFavorites: () => cy.get('[data-test="nav-my-favorites"]'),
+    myProfile: () => cy.get('[data-test="nav-my-profile"]'),
+    myInvoices: () => cy.get('[data-test="nav-my-invoices"]'),
+    myMessages: () => cy.get('[data-test="nav-my-messages"]'),
   };
+
+  clickMenu() {
+    this.elements.menu().click();
+  }
+
+  clickMyFavorites() {
+    this.elements.myFavorites().click();
+  }
+
+  clickHome() {
+    this.elements.home().click();
+  }
 
   clickSignin() {
     this.elements.signinLink().click();
