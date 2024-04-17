@@ -3,7 +3,7 @@
 ### Overview
 
 Welcome to the the-lab Cypress Automation Project! This repository contains automated tests written using [Cypress](https://www.cypress.io/), a powerful end-to-end testing framework for web applications. 
-SUT: [https://practicesoftwaretesting.com](http://thelab.boozang.com/)
+SUT: http://thelab.boozang.com/
 
 ### Prequisites:
 
