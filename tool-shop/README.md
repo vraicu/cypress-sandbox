@@ -2,7 +2,7 @@
 
 ### Overview
 
-Welcome to the tool-shop Cypress Automation Project! This repository contains automated tests written using [Cypress](https://www.cypress.io/), a powerful end-to-end testing framework for web applications.
+Welcome to the tool-shop Cypress Automation Project! This repository contains automated tests written using [Cypress](https://www.cypress.io/), a powerful end-to-end testing framework for web applications. SUT: https://practicesoftwaretesting.com
 
 ### Project structure:
 
