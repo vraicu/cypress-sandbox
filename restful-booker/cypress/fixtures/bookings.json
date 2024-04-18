@@ -1,0 +1,35 @@
+[
+  {
+    "firstname": "Jena",
+    "lastname": "Pollock",
+    "totalprice": 500,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-04-15",
+      "checkout": "2024-04-18"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Jena",
+    "lastname": "Doe",
+    "totalprice": 1000,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2022-05-30",
+      "checkout": "2022-06-05"
+    },
+    "additionalneeds": "None"
+  },
+  {
+    "firstname": "Jack",
+    "lastname": "Doe",
+    "totalprice": 800,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2022-06-01",
+      "checkout": "2022-06-03"
+    },
+    "additionalneeds": "None"
+  }
+]
