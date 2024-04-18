@@ -26,7 +26,7 @@ Welcome to the tool-shop Cypress Automation Project! This repository contains au
 - Node.js installed on your machine
 - Git installed (optional if you downloaded the repository as a zip file)
 
-### Setup insturctions:
+### Setup instructions:
 
 1. Clone the repository
 
