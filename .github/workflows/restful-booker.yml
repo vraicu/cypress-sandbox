@@ -1,0 +1,22 @@
+name: Restful Booker API
+
+on:
+  workflow_dispatch:
+#   push:
+#     branches:
+#       - "develop"
+jobs:
+  cypress:
+    runs-on: ubuntu-22.04
+    name: Run cypress API tests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./restful-booker
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: restful-booker/cypress/screenshots
