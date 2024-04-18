@@ -3,7 +3,7 @@
 ### Overview
 
 Welcome to the the-lab Cypress Automation Project! This repository contains automated API tests written using [Cypress](https://www.cypress.io/), a powerful end-to-end testing framework for web applications. 
-API docs: [http://thelab.boozang.com/](https://restful-booker.herokuapp.com/apidoc/)
+API docs: https://restful-booker.herokuapp.com/apidoc/
 
 ### Prequisites:
 
