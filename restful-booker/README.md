@@ -10,7 +10,7 @@ API docs: https://restful-booker.herokuapp.com/apidoc/
 - Node.js installed on your machine
 - Git installed (optional if you downloaded the repository as a zip file)
 
-### Setup insturctions:
+### Setup instructions:
 
 1. Clone the repository
 
