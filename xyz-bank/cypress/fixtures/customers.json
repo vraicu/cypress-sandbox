@@ -1,0 +1,44 @@
+[
+  {
+    "firstname": "Hermoine",
+    "lastname": "Granger",
+    "postcode": "E859AB",
+    "id": "1",
+    "accountNumbers": "1001 1002 1003"
+  },
+  {
+    "firstname": "Harry",
+    "lastname": "Potter",
+    "postcode": "E725JB",
+    "id": "2",
+    "accountNumbers": "1004 1005 1006"
+  },
+  {
+    "firstname": "Ron",
+    "lastname": "Weasly",
+    "postcode": "E55555",
+    "id": "3",
+    "accountNumbers": "1007 1008 1009"
+  },
+  {
+    "firstname": "Albus",
+    "lastname": "Dumbledore",
+    "postcode": "E55656",
+    "id": "4",
+    "accountNumbers": "1010 1011 1012"
+  },
+  {
+    "firstname": "Neville",
+    "lastname": "Longbottom",
+    "postcode": "E89898",
+    "id": "5",
+    "accountNumbers": "1013 1014 1015"
+  },
+  {
+    "firstname": "Rubeus",
+    "lastname": "Hagrid",
+    "postcode": "E999KL",
+    "id": "6",
+    "accountNumbers": ""
+  }
+]

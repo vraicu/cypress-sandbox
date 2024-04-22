@@ -3,7 +3,7 @@ class openAccountPage {
     customerSelect: () => cy.get("#userSelect"),
     currencySelect: () => cy.get("#currency"),
     processButton: () =>
-      cy.get('form[submit="process()"] > button[type="submit"]'),
+      cy.get('form[ng-submit="process()"] > button[type="submit"]'),
   };
 
   submitAccount() {

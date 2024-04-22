@@ -23,3 +23,5 @@ class addCustomerPage {
     this.elements.postcode().type(postcode);
   }
 }
+
+export default new addCustomerPage();
